@@ -1,0 +1,62 @@
+; First is default
+LoadLanguageFile "${NSISDIR}\Contrib\Language files\Russian.nlf"
+
+; Language selection dialog
+LangString InstallerLanguageTitle  ${LANG_RUSSIAN} "Язык установки"
+LangString SelectInstallerLanguage  ${LANG_RUSSIAN} "Выберите язык программы установки"
+
+; subtitle on license text caption
+LangString LicenseSubTitleUpdate ${LANG_RUSSIAN} "Обновление"
+LangString LicenseSubTitleSetup ${LANG_RUSSIAN} "Настройка"
+
+; installation directory text
+LangString DirectoryChooseTitle ${LANG_RUSSIAN} "Каталог установки" 
+LangString DirectoryChooseUpdate ${LANG_RUSSIAN} "Выберите каталог The Dolphin Viewer 3 для обновления до версии ${VERSION_LONG}.(XXX):"
+LangString DirectoryChooseSetup ${LANG_RUSSIAN} "Выберите каталог для установки The Dolphin Viewer 3:"
+
+; CheckStartupParams message box
+LangString CheckStartupParamsMB ${LANG_RUSSIAN} "Не удалось найти программу «$INSTPROG». Автоматическое обновление не выполнено."
+
+; installation success dialog
+LangString InstSuccesssQuestion ${LANG_RUSSIAN} "Запустить The Dolphin Viewer 3?"
+
+; remove old NSIS version
+LangString RemoveOldNSISVersion ${LANG_RUSSIAN} "Поиск прежней версии..."
+
+; check windows version
+LangString CheckWindowsVersionDP ${LANG_RUSSIAN} "Проверка версии Windows..."
+LangString CheckWindowsVersionMB ${LANG_RUSSIAN} 'The Dolphin Viewer 3 может работать только в Windows XP, Windows 2000 и Mac OS X.$\n$\nПопытка установки в Windows $R0 может привести к сбою и потере данных.$\n$\nВсе равно установить?'
+
+; checkifadministrator function (install)
+LangString CheckAdministratorInstDP ${LANG_RUSSIAN} "Проверка разрешений на установку..."
+LangString CheckAdministratorInstMB ${LANG_RUSSIAN} 'Вероятно, у вас ограниченный аккаунт.$\nДля установки The Dolphin Viewer 3 необходимы права администратора.'
+
+; checkifadministrator function (uninstall)
+LangString CheckAdministratorUnInstDP ${LANG_RUSSIAN} "Проверка разрешений на удаление..."
+LangString CheckAdministratorUnInstMB ${LANG_RUSSIAN} 'Вероятно, у вас ограниченный аккаунт.$\nДля удаления The Dolphin Viewer 3 необходимы права администратора.'
+
+; checkifalreadycurrent
+LangString CheckIfCurrentMB ${LANG_RUSSIAN} "Вероятно, версия The Dolphin Viewer 3 ${VERSION_LONG} уже установлена.$\n$\nУстановить ее снова?"
+
+; checkcpuflags
+LangString MissingSSE2 ${LANG_RUSSIAN} "Возможно, на этом компьютере нет ЦП с поддержкой SSE2, которая необходима для работы SecondLife ${VERSION_LONG}. Продолжить?"
+
+; closesecondlife function (install)
+LangString CloseSecondLifeInstDP ${LANG_RUSSIAN} "Ожидаю завершения работы The Dolphin Viewer 3..."
+LangString CloseSecondLifeInstMB ${LANG_RUSSIAN} "The Dolphin Viewer 3 уже работает, выполнить установку невозможно.$\n$\nЗавершите текущую операцию и нажмите кнопку «OK», чтобы закрыть The Dolphin Viewer 3 и продолжить установку.$\nНажмите кнопку «ОТМЕНА» для отказа от установки."
+
+; closesecondlife function (uninstall)
+LangString CloseSecondLifeUnInstDP ${LANG_RUSSIAN} "Ожидаю завершения работы The Dolphin Viewer 3..."
+LangString CloseSecondLifeUnInstMB ${LANG_RUSSIAN} "The Dolphin Viewer 3 уже работает, выполнить удаление невозможно.$\n$\nЗавершите текущую операцию и нажмите кнопку «OK», чтобы закрыть The Dolphin Viewer 3 и продолжить удаление.$\nНажмите кнопку «ОТМЕНА» для отказа от удаления."
+
+; CheckNetworkConnection
+LangString CheckNetworkConnectionDP ${LANG_RUSSIAN} "Проверка подключения к сети..."
+
+; removecachefiles
+LangString RemoveCacheFilesDP ${LANG_RUSSIAN} "Удаление файлов кэша из папки «Documents and Settings»"
+
+; delete program files
+LangString DeleteProgramFilesMB ${LANG_RUSSIAN} "В каталоге программы SecondLife остались файлы.$\n$\nВероятно, это файлы, созданные или перемещенные вами в $\n$INSTDIR$\n$\nУдалить их?"
+
+; uninstall text
+LangString UninstallTextMsg ${LANG_RUSSIAN} "Программа The Dolphin Viewer 3 ${VERSION_LONG} будет удалена из вашей системы."

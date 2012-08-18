@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<panel
+ border="true"
+ follows="all"
+ height="408"
+ label="Dolphin Viewer 3"
+ layout="topleft"
+ left="102"
+ name="dolphin_viewer_3"
+ top="1"
+ width="517">
+    <tab_container
+      name="tabs" >
+        <panel
+         label="Userinterface"
+         name="panel_dv2prefs_ui" />
+        <panel
+         label="Navigation"
+         name="panel_dv2prefs_navi" />
+        <panel
+         label="Grafik"
+         name="panel_dv2prefs_graphicstuning" />
+        <panel
+         label="Antispam"
+         name="panel_dv2prefs_antispam" />
+        <panel
+         label="Verschiedenes"
+         name="panel_dv2prefs_misc" />
+    </tab_container>
+</panel>

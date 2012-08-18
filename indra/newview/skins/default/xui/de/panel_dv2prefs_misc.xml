@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<panel label="Verschiedenes" name="dv2prefs_misc">
+<text name="chat_and_im_text">Chat und IM:</text>
+<check_box label="Erlaube MU-Style emotes (:jumps anstatt von /me jumps)" name="allow_mu_pose"/>
+<check_box label="OOC-Klammern automatisch schliessen" name="auto_close_ooc"/>
+<check_box label="Tastaturgeräusche abspielen beim chatten" name="play_typing_sound"/> 
+<check_box label="Benachrichtigen, wenn ein Avatar in Chatreichweite kommt" name="radar_report_chat_range"/> 
+<check_box label="Benachrichtigen, wenn ein Avatar in Sichtweite kommt" name="radar_report_draw_range"/> 
+<text name="rlv_related_text">RLV Einstellungen:</text>
+<check_box label="Beim Anmelden das gesamte Inventar laden" name="fetch_inventory_on_login"/>
+<check_box label="Aktiviere RLV (nach Neustart)" name="restrained_love"/>
+<check_box name="restrained_love_debug" label="Aktiviere RLV Debugausgabe"/>
+<check_box label="Verbiete, per RLV die Windlight-Einstellungen zu ändern" name="restrained_love_no_set_env"/>
+<check_box label="Verbiete automatische Inventartransfers per RLV in den #RLV-Ordner" name="restrained_love_forbid_give_to_rlv"/>
+<check_box label="Zeige '...' statt überhaupt nichts bei Chat-Einschränkung" name="restrained_love_show_ellipsis"/>
+<check_box label="Erlaube 'Anziehen' auch bei aktiver RLV-Einschränkung" name="restrained_love_allow_wear" />
+<check_box label="Doppelklick ersetzt getragene Objekte" name="restrained_love_doubleclick_wear" />
+<slider label="Verzögerung beim RLV-Reattach" name="rlv_reattach_delay" />
+<text name="other_options_text">Direkte Bildschirmfotos:</text>
+<combo_box              label="Format"              name="snapshot2disk_format_combo"  >
+                <combo_box.item
+                 label="PNG (Verlustfrei)"
+                 name="PNG"
+                 value="PNG" />
+                <combo_box.item
+                 label="JPEG"
+                 name="JPEG"
+                 value="JPEG" />
+                <combo_box.item
+                 label="BMP (Verlustfrei)"
+                 name="BMP"
+                 value="BMP" />
+   </combo_box>
+  <slider    name="snapshot2disk_jpg_quality"    label="JPG Qualität"/>
+    <check_box      label="Doppelte Auflösung" name="highres_snapshot2disk" />
+    <check_box      label="Lautlose Bildschirmfotos" name="quiet_snapshot2disk" />
+</panel>

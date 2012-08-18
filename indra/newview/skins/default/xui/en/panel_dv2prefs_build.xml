@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<panel
+ border="false"
+ follows="all"
+ height="408"
+ label="Builder"
+ layout="topleft"
+ left="102"
+ name="panel_dv2prefs_build"
+ top="1"
+ width="517">
+        <text
+         top_pad="10"
+         follows="left|top|right"
+	 layout="topleft"
+         height="12"
+         left="10"
+         name="text_box_objprams"
+         width="175">
+         Default Object Parameters
+         </text>
+        <spinner
+         top_pad="5"
+         left_delta="5"
+         decimal_digits="5"
+         follows="left|top"
+	 layout="topleft"
+         height="16"
+         increment="0.05"
+         label="X:"
+         label_width="15"
+         max_val="64"
+         min_val="0.01"
+         name="X size"
+         width="120"
+         control_name="FSBuildPrefs_Xsize"/>
+        <spinner
+         top_pad="5"
+         decimal_digits="5"
+         follows="left|top"
+	 layout="topleft"
+         height="16"
+         increment="0.05"
+         label="Y:"
+         label_width="15"
+         max_val="64"
+         min_val="0.01"
+         name="Y size"
+         width="120"
+         control_name="FSBuildPrefs_Ysize"/>
+        <spinner
+         top_pad="5"
+         decimal_digits="5"
+         follows="left|top"
+	 layout="topleft"
+         height="16"
+         increment="0.05"
+         label="Z:"
+         label_width="15"
+         max_val="64"
+         min_val="0.01"
+         name="Z size"
+         width="120"
+         control_name="FSBuildPrefs_Zsize"/>
+        <text
+         top_pad="10"
+         left="10"
+         follows="left|top"
+	 layout="topleft"
+         height="16"
+         name="text_box_objmaterial"
+         width="50">
+         Material:
+         </text>
+        <combo_box
+         left_pad="2"
+         height="18"
+         width="80"
+         allow_text_entry="false"
+         follows="left|top"
+	 layout="topleft"
+         name="material"
+         control_name="FSBuildPrefs_Material">
+             <combo_item name="Stone" value="Stone">Stone</combo_item>
+             <combo_item name="Metal" value="Metal">Metal</combo_item>
+             <combo_item name="Glass" value="Glass">Glass</combo_item>
+             <combo_item name="Wood" value="Wood">Wood</combo_item>
+             <combo_item name="Flesh" value="Flesh">Flesh</combo_item>
+             <combo_item name="Plastic" value="Plastic">Plastic</combo_item>
+             <combo_item name="Rubber" value="Rubber">Rubber</combo_item>
+        </combo_box>
+
+        <text
+         top_pad="10"
+         left="10"
+         follows="left|top"
+	 layout="topleft"
+         height="10"
+         name="text_box_pivotpoint"
+         width="135">
+          Pivot Point
+        </text>
+<check_box
+         top_pad="5"
+         follows="left|top"
+	 height="16"
+         label="Show axis arrow on root prim position"
+         tool_tip="Default behaviour is to show the axis on the center of mass of a linkset. If enabled, the axis will be shown on the root prim of the linkset instead."
+         name="EmBuildPrefsActualRoot_toggle"
+         control_name="FSBuildPrefs_ActualRoot"/>
+        <spinner
+         top_pad="3"
+         left_delta="5"
+         decimal_digits="5"
+         follows="left|top"
+	 layout="topleft"
+         height="16"
+         increment="0.05"
+         label="X:"
+         label_width="15"
+         max_val="256"
+         min_val="-256"
+         name="X pos"
+         width="120"
+         control_name="FSBuildPrefs_PivotX"/>
+        <spinner
+         top_pad="5"
+         decimal_digits="5"
+         follows="left|top"
+	 layout="topleft"
+         height="16"
+         increment="0.05"
+         label="Y:"
+         label_width="15"
+         max_val="256"
+         min_val="-256"
+         name="Y pos"
+         width="120"
+         control_name="FSBuildPrefs_PivotY"/>
+        <spinner
+         top_pad="5"
+         decimal_digits="5"
+         follows="left|top"
+	 layout="topleft"
+         height="16"
+         increment="0.05"
+         label="Z:"
+         label_width="15"
+         max_val="256"
+         min_val="-256"
+         name="Z pos"
+         width="120"
+         control_name="FSBuildPrefs_PivotZ"/>
+        <check_box
+         top_pad="10"
+         left="10"
+         enabled="true"
+         follows="left|top"
+	 layout="topleft"
+         height="16"
+         label="Values are percentages"
+         tool_tip="Default settings are Percentages and every axis set at 50"
+         name="EmPivotPercToggle"
+         width="100"
+         control_name="FSBuildPrefs_PivotIsPercent"/>
+    <check_box
+         height="16"
+         enabled="true"
+     label="Rez objects with land group if possible"
+     control_name="RezWithLandGroup"
+     layout="topleft"
+     left_delta="0"
+     name="rez_with_land_group"
+     top_pad="3"
+     width="350" />
+    <check_box
+         height="16"
+         enabled="true"
+     label="Save scripts in your inventory as mono instead "
+     control_name="DV3SaveInventoryScriptsAsMono"
+     layout="topleft"
+     left_delta="0"
+     name="save_scripts_in_inv_as_mono"
+     top_pad="3"
+     width="350" />
+</panel>

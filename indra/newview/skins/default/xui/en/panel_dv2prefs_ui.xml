@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<panel
+ border="false"
+ follows="all"
+ height="408"
+ label="User Interface"
+ layout="topleft"
+ left="102"
+ name="dv2prefs_ui"
+ top="1"
+ width="517">
+<text
+type="string"
+length="1"
+follows="left|top"
+height="12"
+layout="topleft"
+left="10"
+name="Inventory"
+top_pad="10"
+width="308">
+	Inventory settings:
+</text>
+    <check_box
+         height="16"
+         enabled="true"
+     label="Hide the inventory library (needs restart)"
+     control_name="NoInventoryLibrary"
+     layout="topleft"
+     left_delta="10"
+     name="no_inventory_library"
+     top_pad="5"
+     width="350" />
+     <check_box
+     height="16"
+     enabled="true"
+         label="Allow separate search terms on each tab in inventory"
+         left_delta="0"
+         name="FSSplitInventorySearchOverTabs"
+         width="350"
+         control_name="FSSplitInventorySearchOverTabs"
+         tool_tip="If enabled, it is possible to enter a different search term for each tab in inventory.">
+        </check_box>
+     
+    <check_box
+         height="16"
+         enabled="true"
+     label="Allow 'Paste as link'"
+     control_name="InventoryLinking"
+     layout="topleft"
+     left_delta="0"
+     name="inventory_linking"
+     top_pad="3"
+     width="350" />
+    <check_box
+         height="16"
+         enabled="true"
+     label="Automatically accept notecards and textures"
+     control_name="AutoAcceptNewInventory"
+     layout="topleft"
+     left_delta="0"
+     name="auto_accept_new_inventory"
+     top_pad="3"
+     width="350" />
+    <check_box
+         height="16"
+         enabled="true"
+     label="Automatically open inventory on receiving objects"
+     control_name="ShowInInventory"
+     layout="topleft"
+     left_delta="0"
+     name="show_in_inventory"
+     top_pad="3"
+     width="350" />
+    <check_box
+         height="16"
+         enabled="true"
+     label="Automatically view new notecards and textures"
+     control_name="ShowNewInventory"
+     layout="topleft"
+     left_delta="0"
+     name="show_new_inventory"
+     top_pad="3"
+     width="350" />
+<text
+type="string"
+length="1"
+follows="left|top"
+height="12"
+layout="topleft"
+left="10"
+name="Inworld"
+top_pad="10"
+width="308">
+	In-world settings:
+</text>
+    <check_box
+         height="16"
+         enabled="true"
+     label="Show Hovertips"
+     control_name="ShowHoverTips"
+     layout="topleft"
+     left_delta="10"
+     name="show_hover_tips"
+     top_pad="3"
+     width="350" />
+    <check_box
+         height="16"
+         enabled="true"
+     label="on all objects"
+     control_name="ShowAllObjectHoverTip"
+     enabled_control="ShowHoverTips"
+     layout="topleft"
+     left_delta="120"
+     name="show_all_objects_hover_tips"
+     top_delta="0"
+     width="350" />
+    <check_box
+         height="16"
+         enabled="true"
+     label="on land"
+     control_name="ShowLandHoverTip"
+     enabled_control="ShowHoverTips"
+     layout="topleft"
+     left_delta="100"
+     name="show_land_hover_tips"
+     top_delta="0"
+     width="350" />
+    <text
+      follows="left|top"
+      layout="topleft"
+      left="10"
+      height="12"
+      name="displayname_colors" 
+      top_pad="10" 
+      width="300"
+      >
+    Displayname colors:   (changes require restart)
+    </text>  
+  
+    <color_swatch
+     can_apply_immediately="true"
+     follows="left|top"
+     height="47"
+     layout="topleft"
+     left_delta="10"
+     name="match"
+     top_pad="3"
+     width="44" >
+		<color_swatch.init_callback
+		 function="Pref.getUIColor"
+		 parameter="NameTagMatch" />
+		<color_swatch.commit_callback
+		 function="Pref.applyUIColor"
+		 parameter="NameTagMatch" />
+	</color_swatch>
+    <text
+     type="string"
+     length="1"
+     follows="left|top"
+     height="10"
+     layout="topleft"
+     left_pad="5"
+     mouse_opaque="false"
+     name="names_match_text"
+     top_delta="5"
+     width="295">
+        Matching Username and Display Name
+    </text>
+    <color_swatch
+     can_apply_immediately="true"
+     follows="left|top"
+     height="47"
+     layout="topleft"
+     left_delta="-49"
+     name="mismatch"
+     top_pad="12"
+     width="44" >
+		<color_swatch.init_callback
+		 function="Pref.getUIColor"
+		 parameter="NameTagMismatch" />
+		<color_swatch.commit_callback
+		 function="Pref.applyUIColor"
+		 parameter="NameTagMismatch" />
+	</color_swatch>
+    <text
+     type="string"
+     length="1"
+     follows="left|top"
+     height="10"
+     layout="topleft"
+     left_pad="5"
+     mouse_opaque="false"
+     name="names_mismatch_text"
+     top_delta="5"
+     width="295">
+        Differing Username and Display Name
+    </text>
+    <color_swatch
+     can_apply_immediately="true"
+     color="EmphasisColor_35"
+     follows="left|top"
+     height="47"
+     layout="topleft"
+     left_delta="-49"
+     name="friends"
+     top_pad="12"
+     width="44" >
+		<color_swatch.init_callback
+		 function="Pref.getUIColor"
+		 parameter="NameTagFriend" />
+		<color_swatch.commit_callback
+		 function="Pref.applyUIColor"
+		 parameter="NameTagFriend" />
+	</color_swatch>
+    <text
+     type="string"
+     length="1"
+     follows="left|top"
+     height="10"
+     layout="topleft"
+     left_pad="5"
+     mouse_opaque="false"
+     name="friends_text"
+     top_delta="5"
+     width="295">
+        Friends (if highlighting selected)
+    </text>
+    <text
+      follows="left|top"
+      layout="topleft"
+      left="10"
+      height="12"
+      name="other_ui_tweaks_text" 
+      top_pad="17" 
+      width="300"
+      >
+    Other UI tweaks:
+    </text>
+      <text
+       type="string"
+       left="20"
+       top_pad="3"
+       width="170"
+       follows="left|top"
+       height="16"
+       layout="topleft"
+       name="ScriptDialogsPerObjectLabel">
+        Scripted Dialogs per Object:
+      </text>
+      <combo_box
+       control_name="ScriptDialogPerObject"
+       height="23"
+       layout="topleft"
+       left_delta="170"
+       top_delta="-5"
+       name="ScriptDialogPerObjectDropdown"
+       width="180">
+        <combo_box.item
+         label="One per Object"
+         name="ScriptDialogOption_0"
+         value="0"/>
+        <combo_box.item
+         label="One per Object &amp; Channel"
+         name="ScriptDialogOption_1"
+         value="1"/>
+        <combo_box.item
+         label="Unconstrained"
+         name="ScriptDialogOption_2"
+         value="2"/>
+      </combo_box>
+    <check_box
+         height="16"
+         enabled="true"
+     label="Show the network statistics bars in the top right corner"
+     control_name="ShowNetStats"
+     layout="topleft"
+     left="20"
+     name="show_net_stats"
+     top_pad="5"
+     width="350" />
+
+      
+    <check_box
+         height="16"
+         enabled="true"
+     label="Announce music information in chat"
+     control_name="DolphinShowStreamMetaData"
+     layout="topleft"
+     left_delta="0"
+     name="dolphin_show_stream_metadata"
+     top_pad="3"
+     width="350" />
+  
+</panel>

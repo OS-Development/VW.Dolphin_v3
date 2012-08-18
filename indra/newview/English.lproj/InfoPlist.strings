@@ -1,0 +1,6 @@
+/* Localized versions of Info.plist keys */
+
+CFBundleName = "Dolphin Viewer 3";
+
+CFBundleShortVersionString = "Dolphin Viewer 3 version 3.3.19.24756";
+CFBundleGetInfoString = "Dolphin Viewer 3 version 3.3.19.24756, Copyright 2004-2010 Linden Research, Inc.";

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<toolbars>
+    <right_toolbar
+     button_display_mode="icons_only">
+        <command
+         name="profile" />
+        <command
+         name="picks" />
+        <command
+         name="people" />
+        <command
+         name="places" />
+        <command
+         name="destinations" />
+        <command
+         name="inventory" />
+        <command
+         name="appearance" />
+        <command
+         name="avatar" />
+    </right_toolbar>
+    <bottom_toolbar
+     button_display_mode="icons_only">
+        <command
+         name="speak" />
+        <command
+         name="chat" />
+        <command
+         name="view" />
+        <command
+         name="snapshot" />
+        <command
+         name="build" />
+        <command
+         name="search" />
+        <command
+         name="map" />
+        <command
+         name="minimap" />
+    </bottom_toolbar>
+    <left_toolbar
+     button_display_mode="icons_only">
+        <command
+         name="aoswitch" />
+        <command
+         name="move" />
+        <command
+         name="gestures" />
+        <command
+         name="voice" />
+        <command
+         name="areasearch" />
+        <command
+         name="environment" />
+    </left_toolbar>
+</toolbars>

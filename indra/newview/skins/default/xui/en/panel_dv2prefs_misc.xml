@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<panel
+ border="false"
+ follows="all"
+ height="408"
+ label="Miscellaneous"
+ layout="topleft"
+ left="102"
+ name="dv2prefs_misc"
+ top="1"
+ width="517">
+<text
+type="string"
+length="1"
+follows="left|top"
+height="12"
+layout="topleft"
+left="10"
+name="chat_and_im_text"
+top_pad="10"
+width="308">
+	Chat and IM:
+</text>
+    <check_box
+         height="16"
+         enabled="true"
+     label="Allow MU-Style emotes"
+     control_name="AllowMUpose"
+     layout="topleft"
+     left_delta="10"
+     name="allow_mu_pose"
+     top_pad="3"
+     width="350" />
+    <check_box
+         height="16"
+         enabled="true"
+     label="Automatically close OOC Chat"
+     control_name="AutoCloseOOC"
+     layout="topleft"
+     left_delta="0"
+     name="auto_close_ooc"
+     top_pad="3"
+     width="350" /> 
+    <check_box
+         height="16"
+         enabled="true"
+     label="Play the typing sound"
+     control_name="PlayTypingSound"
+     layout="topleft"
+     left_delta="0"
+     name="play_typing_sound"
+     top_pad="3"
+     width="350" /> 
+    <check_box
+         height="16"
+         enabled="true"
+     label="Report avatar entering chat range"
+     control_name="RadarReportChatRange"
+     layout="topleft"
+     left_delta="0"
+     name="radar_report_chat_range"
+     top_pad="3"
+     width="350" /> 
+    <check_box
+         height="16"
+         enabled="true"
+     label="Report avatar entering draw range"
+     control_name="RadarReportDrawRange"
+     layout="topleft"
+     left_delta="0"
+     name="radar_report_draw_range"
+     top_pad="3"
+     width="350" /> 
+<text
+type="string"
+length="1"
+follows="left|top"
+height="12"
+layout="topleft"
+left="10"
+name="rlv_related_text"
+top_pad="5"
+width="308">
+	RLV and related:
+</text>
+    <check_box
+         height="16"
+         enabled="true"
+     label="Fetch inventory on login"
+     control_name="FetchInventoryOnLogin"
+     layout="topleft"
+     left_delta="10"
+     name="fetch_inventory_on_login"
+     top_pad="3"
+     width="350" /> 
+    <check_box
+         height="16"
+         enabled="true"
+     label="Enable RLV (needs a restart)"
+     control_name="RestrainedLove"
+     layout="topleft"
+     left_delta="0"
+     name="restrained_love"
+     top_pad="3"
+     width="250" >
+   <check_box.commit_callback
+    function="Pref.CommitRLVEnabled"/>
+    </check_box>
+    <check_box
+	name="restrained_love_debug"
+	width="250"
+	control_name="RestrainedLoveDebug"
+	enabled_control="RestrainedLove"
+	value="true"
+	layout="topleft"
+	height="15"
+	top_delta="0"
+	tool_tip="Enable this to see RLV debug messages in chat"
+	label="Enable RLV debug output"
+	left_pad="1" />
+    <check_box
+         height="16"
+         enabled="true"
+     label="Forbid RLV to change windlight settings"
+     enabled_control="RestrainedLove"
+     control_name="RestrainedLoveNoSetEnv"
+     layout="topleft"
+     left_delta="-251"
+     name="restrained_love_no_set_env"
+     top_pad="3"
+     width="350" />
+    <check_box
+         height="16"
+         enabled="true"
+     label="Forbid RLV to auto accept inventory offers into the #RLV folder"
+     enabled_control="RestrainedLove"
+     control_name="RestrainedLoveForbidGiveToRLV"
+     layout="topleft"
+     left_delta="0"
+     name="restrained_love_forbid_give_to_rlv"
+     top_pad="3"
+     width="350" />
+    <check_box
+         height="16"
+         enabled="true"
+     label="Show ..."
+     enabled_control="RestrainedLove"
+     control_name="RestrainedLoveShowEllipsis"
+     layout="topleft"
+     left_delta="0"
+     name="restrained_love_show_ellipsis"
+     top_pad="3"
+     width="350" />
+    <check_box
+         height="16"
+         enabled="true"
+     label="Allow wear even under RLV restrictions"
+     enabled_control="RestrainedLove"
+     control_name="RestrainedLoveAllowWear"
+     layout="topleft"
+     left_delta="0"
+     name="restrained_love_allow_wear"
+     top_pad="3"
+     width="350" />
+    <check_box
+         height="16"
+         enabled="true"
+     label="Double-click to replace worn items"
+     enabled_control="RestrainedLove"
+     control_name="RestrainedLoveDoubleClickWear"
+     layout="topleft"
+     left_delta="0"
+     name="restrained_love_doubleclick_wear"
+     top_pad="3"
+     width="350" />
+  <slider
+   control_name="RestrainedLoveReattachDelay"
+     enabled_control="RestrainedLove"
+   label="RLV reattach delay"
+   label_width="200"
+   follows="left|top"
+   height="15"
+   initial_value="10"
+   layout="topleft"
+   can_edit_text="false"
+   decimal_digits="0"
+   left_delta="0"
+   min_val="10"
+   max_val="255"
+   name="rlv_reattach_delay"
+   top_pad="3"
+   width="448" />
+<text
+type="string"
+length="1"
+follows="left|top"
+height="12"
+layout="topleft"
+left="10"
+name="other_options_text"
+top_pad="5"
+width="308">
+	Direct snapshot options:
+      </text>
+            <combo_box
+             follows="left|top"
+             height="23"
+             label="Format"
+             layout="topleft"
+             left_delta="0"
+             name="snapshot2disk_format_combo"
+             top_pad="0"
+             width="120">
+                <combo_box.item
+                 label="PNG (Lossless)"
+                 name="PNG"
+                 value="PNG" />
+                <combo_box.item
+                 label="JPEG"
+                 name="JPEG"
+                 value="JPEG" />
+                <combo_box.item
+                 label="BMP (Lossless)"
+                 name="BMP"
+                 value="BMP" />
+   <combo_box.commit_callback
+    function="Pref.CommitSnapshot2DiskFormatChanged"/>
+   </combo_box>
+  <slider
+   control_name="Snapshot2DiskQuality"
+   label="JPG Quality"
+   label_width="83"
+   follows="left|top"
+   height="15"
+   initial_value="90"
+   layout="topleft"
+   can_edit_text="false"
+   decimal_digits="0"
+   left_delta="130"
+   min_val="0"
+   max_val="100"
+   name="snapshot2disk_jpg_quality"
+   top_delta="5"
+   width="328" />
+    <check_box
+         height="16"
+         enabled="true"
+     label="Double Resolution"
+     control_name="HighResSnapshot"
+     layout="topleft"
+     left="20"
+     name="highres_snapshot2disk"
+     top_pad="5"
+     width="350" />
+    <check_box
+         height="16"
+         enabled="true"
+     label="Silent Snapshots"
+     control_name="QuietSnapshotsToDisk"
+     layout="topleft"
+     left_delta="0"
+     name="quiet_snapshot2disk"
+     top_pad="3"
+     width="350" />
+</panel>

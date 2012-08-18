@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<panel label="Build" name="panel_dv2prefs_build">
+  <text name="text_box_objprams">Default-Objektparameter</text>
+        <spinner label="X:" name="X size"/>
+        <spinner label="Y:" name="Y size"/>
+        <spinner label="Z:" name="Z size" />
+	<text name="text_box_objmaterial">Material:</text>
+        <combo_box name="material"
+         control_name="FSBuildPrefs_Material">
+             <combo_item name="Stone" value="Stone">Stein</combo_item>
+             <combo_item name="Metal" value="Metal">Metall</combo_item>
+             <combo_item name="Glass" value="Glass">Glas</combo_item>
+             <combo_item name="Wood" value="Wood">Holz</combo_item>
+             <combo_item name="Flesh" value="Flesh">Fleisch</combo_item>
+             <combo_item name="Plastic" value="Plastic">Plastik</combo_item>
+             <combo_item name="Rubber" value="Rubber">Gummi</combo_item>
+        </combo_box>
+
+ <text name="text_box_pivotpoint">Angelpunkt</text>
+        <check_box label="Verankere das Achsenkreuz im Root-Objekt" tool_tip="Normalerweise ist das Achsenkreuz im Schwerpunkt des Objektes verankert. Wenn diese Option hier eingeschaltet ist, wird das Achsenkreuz statt dessen im Root-Prim verankert." name="EmBuildPrefsActualRoot_toggle"/>
+        <spinner label="X:" name="X pos"/>
+        <spinner label="Y:" name="Y pos" />
+        <spinner label="Z:" name="Z pos" />
+        <check_box label="Werte sind in Prozent" tool_tip="Die Defaultwerte sind in Prozent" name="EmPivotPercToggle" />
+	<check_box label="Versuche, Objekte immer mit der Landgruppe zu rezzen" name="rez_with_land_group" />
+</panel>

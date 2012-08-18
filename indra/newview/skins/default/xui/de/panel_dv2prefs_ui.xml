@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<panel label="Userinterface" name="dv2prefs_ui" >
+<text name="Inventory">Inventoryeinstellungen:</text>
+<check_box label="Library nicht anzeigen (benötigt Neustart)" name="no_inventory_library"/>
+<check_box label="Erlaube 'Als link einfügen'" name="inventory_linking"/>
+<check_box label="Notecards und Texturen automatisch annehmen" name="auto_accept_new_inventory"/>
+<check_box label="Automatisch das Inventory öffnen, wenn Objekte erhalten werden" name="show_in_inventory"/>
+<check_box label="Notecards und Texturen beim Annehmen öffnen" name="show_new_inventory"/>
+<text name="Inworld">Inworld Einstellungen:</text>
+<check_box label="Hovertips zeigen" name="show_hover_tips"/>
+<check_box label="Alle Objekte" name="show_all_objects_hover_tips"/>
+<check_box label="Land" name="show_land_hover_tips"/>
+<text name="displayname_colors">Farben für Displaynamen (benötigt Neustart)</text>  
+<text name="names_match_text">Displayname und Username stimmen überein</text>
+<text name="names_mismatch_text">Displayname und Username unterscheiden sich</text>
+<text name="friends_text">Freund (bei eingeschaltetem 'Freunde hervorheben')</text>
+<text name="other_ui_tweaks_text">Andere Einstellungen:</text>
+<check_box label="Netzwerkstatistik in der oberen rechten Ecke anzeigen" name="show_net_stats"/>
+<check_box label="Musikinformationen (ID3-Tags) im Chat anzeigen" name="dolphin_show_stream_metadata"/>
+</panel>

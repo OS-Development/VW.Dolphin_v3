@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<panel
+ border="true"
+ follows="all"
+ height="408"
+ label="Dolphin Viewer 3"
+ layout="topleft"
+ left="102"
+ name="dolphin_viewer_3"
+ top="1"
+ width="517">
+    <tab_container
+     follows="all"
+     halign="center"
+     layout="topleft"
+     left="5"
+     height="390"
+     min_width="517"
+     width="517"
+     name="tabs"
+     tab_min_width="80"
+     tab_height="30"
+     tab_position="top"
+     top_pad="5">
+        <panel
+         filename="panel_dv2prefs_ui.xml"
+         label="User interface"
+         layout="topleft"
+         help_topic="dv2prefs_ui_tab"
+         name="panel_dv2prefs_ui" />
+        <panel
+         filename="panel_dv2prefs_navi.xml"
+         label="Navigation"
+         layout="topleft"
+         help_topic="dv2prefs_navi_tab"
+         name="panel_dv2prefs_navi" />
+        <panel
+         filename="panel_dv2prefs_build.xml"
+         label="Builder"
+         layout="topleft"
+         help_topic="dv2prefs_build_tab"
+         name="panel_dv2prefs_build" />
+        <panel
+         filename="panel_dv2prefs_graphicstuning.xml"
+         label="Graphics"
+         layout="topleft"
+         help_topic="dv2prefs_tuning_tab"
+         name="panel_dv2prefs_graphicstuning" />
+        <panel
+         filename="panel_dv2prefs_antispam.xml"
+         label="Antispam"
+         layout="topleft"
+         help_topic="dv2prefs_antispam_tab"
+         name="panel_dv2prefs_antispam" />
+        <panel
+         filename="panel_dv2prefs_misc.xml"
+         label="Miscellaneous"
+         layout="topleft"
+         help_topic="dv2prefs_misc_tab"
+         name="panel_dv2prefs_misc" />
+    </tab_container>
+</panel>

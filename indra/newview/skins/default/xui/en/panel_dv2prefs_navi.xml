@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<panel
+ border="false"
+ follows="all"
+ height="408"
+ label="Navigation"
+ layout="topleft"
+ left="102"
+ name="dv2prefs_navi"
+ top="1"
+ width="517">
+<text
+type="string"
+length="1"
+follows="left|top"
+height="12"
+layout="topleft"
+left="10"
+name="minimap_text"
+top_pad="10"
+width="308">
+	Minimap:
+</text>
+    <check_box
+         height="16"
+         enabled="true"
+     label="Rotate the mini map"
+     control_name="MiniMapRotate"
+     layout="topleft"
+     left_delta="10"
+     name="minimap_rotate"
+     top_pad="5"
+     width="350" />
+
+    <check_box
+         height="16"
+         enabled="true"
+     label="Highlight physical prims on the mini map"
+     control_name="MiniMapHighlightPhysical"
+     layout="topleft"
+     left_delta="0"
+     name="highlight_physical"
+     top_pad="5"
+     width="350" />
+
+    <check_box
+         height="16"
+         enabled="true"
+     label="Show phantom prims as partially transparent on the mini map"
+     control_name="MiniMapPhantomIsTransparent"
+     layout="topleft"
+     left_delta="0"
+     name="phantom_is_transparent"
+     top_pad="5"
+     width="350" />
+  <slider
+  label="Opacity of phantom prims"
+  tool_tip="Opacity of phantom prims"
+  label_width="200"
+   control_name="MinimapPhantomPrimOpacity"
+     enabled_control="MiniMapPhantomIsTransparent"
+   follows="left|top"
+   height="15"
+   initial_value="96"
+   layout="topleft"
+   can_edit_text="true"
+   decimal_digits="0"
+   left_delta="0"
+   min_val="0"
+   max_val="255"
+   name="phantom_prim_opacity"
+   top_pad="5"
+   width="465" />
+  <slider
+  label="Max size of prims on minimap"
+  tool_tip="Max size of prims on minimap"
+  label_width="200"
+   control_name="MiniMapPrimMaxRadius"
+   follows="left|top"
+   height="15"
+   initial_value="96"
+   layout="topleft"
+   can_edit_text="true"
+   decimal_digits="0"
+   left_delta="0"
+   min_val="10"
+   max_val="256"
+   name="prim_max_radius"
+   top_pad="5"
+   width="465" />
+<text
+type="string"
+length="1"
+follows="left|top"
+height="12"
+layout="topleft"
+left="10"
+name="camera_text"
+top_pad="10"
+width="308">
+	Camera:
+</text>
+    <check_box
+         height="16"
+         enabled="true"
+     label="Do not automatically move the camera out of objects on collision"
+     control_name="CameraIgnoreCollisions"
+     layout="topleft"
+     left_delta="10"
+     name="camera_ignore_collisions"
+     top_pad="5"
+     width="350" />
+
+</panel>

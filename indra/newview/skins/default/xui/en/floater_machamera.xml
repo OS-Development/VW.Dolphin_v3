@@ -1,0 +1,911 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<!-- Sample "floater" window with examples of common widgets.
+
+    Notes:
+    XML UI (XUI) files use spaces for indentation, not tabs.
+    All position values are in pixels.
+    For now, each widget must contain attribute layout="topleft".
+    0,0 is the top-left corner of the floater.
+    Each widget must have a unique name attribute.
+    If a widget is aligned with the one before it, use relative positioning:
+      top_pad
+      top_delta
+      left_pad
+      left_delta
+    Otherwise specify location with left and top attributes.
+-->
+<floater
+ legacy_header_height="13"
+ can_dock="false"
+ can_resize="false"
+ title="MaChamera Onscreen Machinima Settings by Marx Catteneo v1.8"
+ height="180"
+ min_width="1084"
+ min_height="180"
+ layout="topleft"
+ name="floater_test_widgets"
+ translate="false"
+ width="1084">
+
+ <!-- column 1 spacenavigator-->
+    <button
+    height="20"
+    label="FlyCam"
+	tool_tip="Opens Joystick Configuration Window"
+    layout="topleft"
+	halign="right"
+	left="115"
+    name="joystick_setup_button"
+    top="16"
+    width="55">
+    <button.commit_callback
+     function="Floater.Show"
+     parameter="pref_joystick" />
+    </button>
+     <check_box
+     bottom="32"
+     control_name="AutoLeveling"
+	 halign="left"
+     label="Auto Level"
+	 tool_tip="Flycam: Keeps Camera Horizontal/No Banking"
+     layout="topleft"
+     left="15"
+     name="AutoLeveling"
+     width="70" />
+    <check_box
+     bottom="50"
+     control_name="JoystickAvatarEnabled"
+     halign="left"
+     label="Avatar"
+	 tool_tip="Flycam: Controls Avatar Movements on/off"
+     layout="topleft"
+     left="15"
+     name="JoystickAvatarEnabled"
+     width="70" />
+	 
+    <text
+     type="string"
+     length="1"
+     bottom="63"
+     halign="left"
+     layout="topleft"
+     left="18"
+     name="XScale"
+	 tool_tip="Flycam Move Speed: Left-Right"
+     width="40">
+        X Scale:
+    </text>
+    <spinner
+     bottom="63"
+     control_name="FlycamAxisScale1"
+	 tool_tip="Outdoors=5 Indoors=0.5 Close Up=0.05"
+     decimal_digits="2"
+     label_width="0"
+     layout="topleft"
+     left="118"
+     max_val="1024"
+     min_val="-1024"
+     name="FlycamAxisScale1"
+     width="56" />
+ 
+     <text
+     type="string"
+     length="1"
+     bottom="83"
+     halign="leftt"
+     layout="topleft"
+     left="18"
+     name="YScale"
+	 tool_tip="Flycam Move Speed: Forward-Backward"
+     width="40">
+        Y Scale:
+    </text>
+    <spinner
+     bottom="83"
+     control_name="FlycamAxisScale2"
+	 tool_tip="Outdoors=5 Indoors=0.5 Close Up=0.05"
+     decimal_digits="2"
+     label_width="0"
+     layout="topleft"
+     left="118"
+     max_val="1024"
+     min_val="-1024"
+     name="FlycamAxisScale2"
+     width="56" />
+
+	 <text
+     type="string"
+     length="1"
+     bottom="103"
+     halign="left"
+     layout="topleft"
+     left="18"
+     name="ZScale"
+	 tool_tip="Flycam Move Speed: Up-Down"
+     width="40">
+        Z Scale:
+    </text>
+    <spinner
+     bottom="103"
+     control_name="FlycamAxisScale0"
+	 tool_tip="Outdoors=5 Indoors=0.5 Close Up=0.05"
+     decimal_digits="2"
+     label_width="0"
+     layout="topleft"
+     left="118"
+     max_val="1024"
+     min_val="-1024"
+     name="FlycamAxisScale0"
+     width="56" />
+
+	 <text
+     type="string"
+     length="1"
+     bottom="123"
+     halign="left"
+     layout="topleft"
+     left="18"
+     name="PitchScale"
+	 tool_tip="Flycam Rotation Speed: Vertical"
+     width="40">
+        Tilt:
+    </text>
+    <spinner
+     bottom="123"
+     control_name="FlycamAxisScale4"
+	 tool_tip="Nervous=0.5 Smooth=0.05 Very Slow=0.01"	 
+     decimal_digits="2"
+	 increment="0.01"
+     label_width="0"
+     layout="topleft"
+     left="118"
+     max_val="1024"
+     min_val="-1024"
+     name="FlycamAxisScale4"
+     width="56" />
+
+	 <text
+     type="string"
+     length="1"
+     bottom="143"
+     halign="left"
+     layout="topleft"
+     left="18"
+     name="YawScale"
+	 tool_tip="Flycam Rotation Speed: Horizontal"	 
+     width="40">
+        Pan:
+    </text>
+    <spinner
+     bottom="143"
+     control_name="FlycamAxisScale5"
+	 tool_tip="Nervous=0.5 Smooth=0.05 Very Slow=0.01"
+     decimal_digits="2"
+	 increment="0.01"
+     label_width="0"
+     layout="topleft"
+     left="118"
+     max_val="1024"
+     min_val="-1024"
+     name="FlycamAxisScale5"
+     width="56" />
+
+	 <text
+     type="string"
+     length="1"
+     bottom="163"
+     halign="left"
+     layout="topleft"
+     left="18"
+     name="RollScale"
+	 tool_tip="Flycam Rotation Speed: Banking (Auto Level Off)"
+     width="40">
+        Bank:
+    </text>
+    <spinner
+     bottom="163"
+     control_name="FlycamAxisScale3"
+	 tool_tip="Nervous=0.3 Smooth=0.03= Very Slow=0.01"
+     decimal_digits="2"
+	 increment="0.01"
+     label_width="0"
+     layout="topleft"
+     left="118"
+     max_val="1024"
+     min_val="-1024"
+     name="FlycamAxisScale3"
+     width="56" />
+
+
+ <!-- column 2 alt zoom + mouselook	-->	 
+	<icon
+     follows="left|top"
+     height="18"
+     image_name="Cam_FreeCam_Off"
+     layout="topleft"
+     name="camera_icon"
+     mouse_opaque="false"
+     visible="true"
+     width="15"
+     left="190"
+     top="14"/>
+  <slider
+   can_edit_text="true"
+   control_name="CameraAngle"
+   tool_tip="Extreme Telelens=0.1 Default=1.04 Wide 1.8 Fish Eye=2.4"
+   decimal_digits="2"
+   follows="left|top"
+   height="16"
+   increment="0.002"
+   initial_value="1.57"
+   layout="topleft"
+   label_width="85"
+   label="Camera Angle:"
+   left_pad="7"
+   max_val="2.4"
+   min_val="0.1"
+   name="camera_fov"
+     show_text="true"
+   width="200" />
+     <slider
+     can_edit_text="true"
+     control_name="DynamicCameraStrength"
+	 tool_tip="Camera lag 0=None 30=Sluggish"
+     decimal_digits="2"
+     follows="left|top"
+     height="16"
+     increment="1"
+     initial_value="2"
+     layout="topleft"
+     label="Dyn. Cam. Str:"
+     left_delta="0"
+     label_width="85"
+     max_val="30"
+     min_val="0.00"
+     name="camera_lag"
+     show_text="true"
+     width="200"
+     top_pad="4"/>
+  <slider
+   can_edit_text="true"
+   control_name="CameraOffsetScale"
+   tool_tip="Zoom In-Out 3rd Person Views default=1.0"
+   decimal_digits="2"
+   follows="left|top"
+   height="16"
+   increment="0.01"
+   initial_value="1"
+   layout="topleft"
+   label="Offset Scale:"
+   left_delta="0"
+   label_width="85"
+   max_val="25"
+   min_val="0.45"
+   name="camera_offset_scale"
+   show_text="true"
+   width="200"
+   top_pad="4"/>
+     <slider
+     can_edit_text="true"
+     control_name="CameraPositionSmoothing"
+	 tool_tip="Handheld=0 OIS=20 Steadicam=40 Crane=200"
+     decimal_digits="0"
+     follows="left|top"
+     height="16"
+     increment="0.025"
+     initial_value="1"
+     layout="topleft"
+     label="Pos. Smoothing:"
+     left_delta="0"
+   label_width="85"
+     max_val="200"
+     min_val="1"
+     name="camera_position_smoothing"
+     show_text="true"
+     width="200"
+     top_pad="4"/>
+     <slider
+     can_edit_text="true"
+     control_name="ZoomTime"
+	 tool_tip="Travel Time To New Cam Position In Seconds"
+     decimal_digits="2"
+     follows="left|top"
+     height="16"
+     increment="0.1"
+     initial_value="1"
+     layout="topleft"
+     label="Zoom Time:"
+     left_delta="0"
+   label_width="85"
+     max_val="30"
+     min_val="0"
+     name="zoomtime"
+     show_text="true"
+     width="200"
+     top_pad="4"/>
+ 
+  <icon
+	 follows="left|top"
+	 height="18"
+	 image_name="Move_Walk_Off"
+   layout="topleft"
+	 name="avatar_icon"
+	 mouse_opaque="false"
+	 visible="true"
+	 width="15"
+   top_pad="5"
+   left="190" />
+  <check_box
+   control_name="FirstPersonAvatarVisible"
+   follows="top"
+   height="20"
+   label="Show avatar in Mouselook"
+   layout="topleft"
+   left_pad="7"
+   name="first_person_avatar_visible"
+   width="256" />
+     <check_box
+   control_name="MouseSmooth"
+	 follows="left|top"
+   height="16"
+   label="Smoothen Mouselook Movements"
+   layout="topleft"
+   left_delta="0"
+   name="MouseSmooth"
+   top_pad="2"
+   width="128" />	
+   
+     <slider
+   can_edit_text="true"
+   control_name="MouseSensitivity"
+   tool_tip="Mouse Sensitivity Default=3.0"
+   decimal_digits="2"
+   follows="left|top"
+   height="16"
+   increment="0.5"
+   initial_value="3"
+   layout="topleft"
+   label_width="90"
+   label="Mousel. sensitivity:"
+   left_delta="0"
+   max_val="15"
+   min_val="0"
+   name="MouseSensitivity"
+     show_text="true"
+   width="200" 
+        top_pad="5"/>
+	
+	
+<!-- column 3 shadow softening+ambient occlusion+sun position	 -->
+	    <slider
+        can_edit_text="true"
+        control_name="RenderShadowResolutionScale"
+        tool_tip="Minimum Quality=1.5 Hi-Def=2+" 
+        decimal_digits="1"
+        height="16"
+        increment="0.1"
+        initial_value="1"
+        label="Shadow Resolution:"
+        label_width="95"
+        layout="topleft"
+        left="430"
+        min_val="0.1"
+        max_val="3"
+        name="ShadowResolution"
+        top="16"
+        width="200" />
+        <slider
+        control_name="RenderShadowBlurSize"
+		tool_tip="Shadow Softening When On Default=1.3 Very Soft=2+"
+        can_edit_text="true"
+        decimal_digits="1"
+        follows="left|top"
+        height="16"
+        increment="0.1"
+        initial_value="1"
+        label="Shadow Blur Size:"
+        label_width="95"
+        layout="topleft"
+        left="430"
+        max_val="4"
+        min_val="0"
+        name="BlurSize"
+        top_pad="-1"
+        width="200" />
+        <slider
+        control_name="RenderShadowBlurDistFactor"
+		tool_tip="Distant Shadow Softening Default=0.05 Realistic=0.2"
+        can_edit_text="true"
+        decimal_digits="1"
+        follows="left|top"
+        height="16"
+        increment="0.05"
+        initial_value="1"
+        label="Sh. Blur Dist Fact:"
+        label_width="95"
+        layout="topleft"
+        left="430"
+        max_val="1"
+        min_val="0"
+        name="BlurDistance"
+        top_pad="-1"
+        width="200" />
+
+	 	<button
+   height="20"
+   label="RenderShadowSplitExponent (Debug)"
+   tool_tip="Visible Shadow Split Errors: In Debug Set The X, Y, Z values For The Situation"
+   layout="topleft"
+   left="425"
+   name="RenderShadowSplitExponent"
+   top="63"
+   width="210">
+    <button.commit_callback
+             function="Advanced.ShowDebugSettings"
+             parameter="all" /> 
+  </button>
+	        <slider
+        control_name="RenderGlowStrength"
+		tool_tip="Glow strength 0 to 1.00 Default=0.35"			
+        can_edit_text="true"
+        decimal_digits="2"
+        follows="left|top"
+        height="16"
+        increment="0.05"
+        initial_value="0.35"
+        label="Glow Strength:"
+        label_width="95"
+        layout="topleft"
+        left="430"
+        max_val="1.0"
+        min_val="0"
+        name="Glow Strength"
+        top_pad="8"
+        width="200" />
+        <slider
+        control_name="RenderGlowIterations"
+		tool_tip="Number of iterations 0 to 5 Higher is wider and smoother but slower Default=2"			
+        can_edit_text="true"
+        decimal_digits="0"
+        follows="left|top"
+        height="16"
+        increment="1"
+        initial_value="2"
+        label="Glow Iterations:"
+        label_width="95"
+        layout="topleft"
+        left="430"
+        max_val="5"
+        min_val="0"
+        name="Glow Iterations"
+        top_pad="-1"
+        width="200" />
+        <slider
+        control_name="RenderSSAOScale"
+		tool_tip="Edge Sharpness Under 600=Sharp Edges, Above 600 Smooth Scale Default=350"			
+        can_edit_text="true"
+        decimal_digits="0"
+        follows="left|top"
+        height="16"
+        increment="1"
+        initial_value="40"
+        label="SSAO Scale:"
+        label_width="95"
+        layout="topleft"
+        left="430"
+        max_val="999"
+        min_val="0"
+        name="SSAOScale"
+        top_pad="8"
+        width="200" />
+        <slider
+        control_name="RenderSSAOMaxScale"
+		tool_tip="Edge Sharpness Under 130=Sharp Edges, Above 130 Smooth Scale Default=200"		
+        can_edit_text="true"
+        decimal_digits="0"
+        follows="left|top"
+        height="16"
+        increment="1"
+        initial_value="200"
+        label="SSAO Max Scale:"
+        label_width="95"
+        layout="topleft"
+        left="430"
+        max_val="400"
+        min_val="0"
+        name="SSAOMaxScale"
+        top_pad="-1"
+        width="200" />
+        <slider
+        control_name="RenderSSAOFactor"
+		tool_tip="Sensitivity Larger Is More Default=1.0"
+        can_edit_text="true"
+        decimal_digits="2"
+        follows="left|top"
+        height="16"
+        increment="0.10"
+        initial_value="1.0"
+        label="SSAO Factor:"
+        label_width="95"
+        layout="topleft"
+        left="430"
+        max_val="1"
+        min_val="0"
+        name="SSAOFactor"
+        top_pad="-1"
+        width="200" /> 
+		
+		
+
+
+		
+
+		
+		<!-- column 4 DOF+environment -->
+		<check_box
+	    control_name="RenderDepthOfField"
+		follows="left|top"
+	    height="16"
+	    initial_value="true"
+	    label="Depth of Field"
+	    layout="topleft"
+	    top="16"
+	    left="647"
+	    name="DOFEnabled"
+	    tool_tip="Render Depth of Field in deferred rendering."
+	    width="115"/>
+		<!--
+		<check_box
+	    control_name="RenderUnderWaterDistortion"
+	    height="16"
+	    initial_value="true"
+	    label="Underwater Disto."
+	    layout="topleft"
+	    top="16"
+	    left="765"
+	    name="RenderUnderWaterDistortion"
+	    tool_tip="Underwater Distortion when Depth of Field is enabled."
+	    width="115"/>
+		-->
+		<slider
+	    control_name="CameraFNumber"
+		tool_tip="Aperture: Under 2.5=Strong DOF above 20=DOF Off Linked Reverse to Focal Length"
+		can_edit_text="true"
+	    decimal_digits="1"
+	    follows="left|top"
+	    height="16"
+	    increment="0.1"
+	    initial_value="2.5"
+	    label="Camera F Number:"
+	    label_width="110"
+	    layout="topleft"
+	    left="649"
+	    max_val="128"
+	    min_val="0.5"
+	    name="CameraFNum"
+	    top_pad="2"
+	    width="236"/>
+	   <slider
+	    control_name="CameraFocalLength"
+		tool_tip="Focal Length In mm: DOF Off=0.5 Strong DOF above 100 Linked Reverse to CameraFNumber"
+		can_edit_text="true"
+	    decimal_digits="1"
+	    follows="left|top"
+	    height="16"
+	    increment="5"
+	    initial_value="50"
+	    label="Focal Length mm:"
+	    label_width="110"
+	    layout="topleft"
+	    left="649"
+	    max_val="999"
+	    min_val="5"
+	    name="CameraFocal"
+	    top_pad="2"
+	    width="236"/>
+        <slider
+        control_name="CameraMaxCoF"
+	    tool_tip="Circle of Confusion- Amount of Lens Blur Medium=4 Strong=10 Insane=20+ Heavy FPS drop!"		
+        visiblity_control="RenderUseDoF"
+        can_edit_text="true"
+        decimal_digits="2"
+        follows="left|top"
+        height="16"
+        increment="0.1"
+        initial_value="10.0"
+        label="Circle of Confusion:"
+        label_width="110"
+        layout="topleft"
+        left="649"
+        max_val="100"
+        min_val="0"
+        name="CameraCoF"
+        top_pad="2"
+        width="236" />
+	   <slider
+	    control_name="CameraFieldOfView"
+		tool_tip="Relative Shallowness: Shallow in CU=10 Shallow in Landscape=60+ linked to viewpoint-aimpoint distance"
+		can_edit_text="true"
+	    decimal_digits="2"
+	    follows="left|top"
+	    height="16"
+	    increment="1"
+	    initial_value="2"
+	    label="Camera Vert. FOV:"
+	    label_width="110"
+	    layout="topleft"
+	    left="649"
+	    max_val="200"
+	    min_val="2"
+	    name="Camera FOV"
+	    top_pad="1"
+	    width="236"/>
+	   <slider
+	    control_name="CameraDoFResScale"
+		tool_tip="Resolution scale can limit artefacts at borders but can drop FPS Default=0.6"
+		can_edit_text="true"
+	    decimal_digits="2"
+	    follows="left|top"
+	    height="16"
+	    increment="0.1"
+	    initial_value="0.7"
+	    label="DOF resolution:"
+	    label_width="110"
+	    layout="topleft"
+	    left="649"
+	    max_val="1.0"
+	    min_val="0.3"
+	    name="CameraDoFResScale"
+	    top_pad="2"
+	    width="236"/>
+	   <slider
+	    control_name="CameraFocusTransitionTime"
+		tool_tip="Optical Travel Time in seconds, when moving focus with alt-zoom or spacenavigator"
+		can_edit_text="true"
+	    decimal_digits="2"
+	    follows="left|top"
+	    height="16"
+	    increment="0.1"
+	    initial_value="0.5"
+	    label="Focus Trans. Time:"
+	    label_width="110"
+	    layout="topleft"
+	    left="649"
+	    max_val="20"
+	    min_val="0.1"
+	    name="CameraFocusTrans"
+	    top_pad="2"
+	    width="236"/>
+	   <!--
+	   <slider
+	    control_name="CameraUnderWaterDistortion"
+		tool_tip="Underwater Distortion Linked to Circle of Confusion - Under LL Construction?"
+		can_edit_text="true"
+	    decimal_digits="2"
+	    follows="left|top"
+	    height="16"
+	    increment="1"
+	    initial_value="5.0"
+	    label="Underw. Disto. Str:"
+	    label_width="110"
+	    layout="topleft"
+	    left="649"
+	    max_val="30"
+	    min_val="0.0"
+	    name="CameraUnderWaterDistortion"
+	    top_pad="1"
+	    width="236"/>	
+		-->	
+	
+	    <button
+	     follows="left|top"
+	     height="23"
+           use_ellipses="true"
+	     layout="topleft"
+	     left="646"
+	     name="Edit Sky"
+	     label="Edit Sky" 
+	     tool_tip="Pops up Sky Editor window"
+	     top="153"
+	     width="70">
+		 <button.commit_callback
+               function="World.EnvPreset"
+               parameter="edit_sky" />
+		 </button>
+	    <button
+	     follows="left|top"
+	     height="23"
+           use_ellipses="true"
+	     layout="topleft"
+	     left="720"
+	     name="Edit Water"
+	     label="Edit Water" 
+	     tool_tip="Pops up Water Editor window"
+	     top="153"
+	     width="70">
+		 <button.commit_callback
+               function="World.EnvPreset"
+               parameter="edit_water" />
+		 </button>
+	    <button
+	     follows="left|top"
+	     height="23"
+           use_ellipses="true"
+	     layout="topleft"
+	     left="806"
+	     name="Environment"
+	     label="Environment" 
+	     tool_tip="Pops up Water Editor window"
+	     top="153"
+	     width="80">
+	      <button.init_callback
+		      function="Button.SetFloaterToggle"
+		      parameter="env_settings" />
+	      </button>	 
+
+		<!-- column 5 shader toggles -->
+		<check_box
+		 control_name="RenderTransparentWater"
+		 height="16"
+		 initial_value="true"
+		 label="Transparent Water"
+		 layout="topleft"
+		 name="TransparentWater"
+		 left="902"
+		 bottom="32"
+		 width="256" />
+		<check_box
+		 control_name="RenderObjectBump"
+		 height="16"
+		 initial_value="true"
+		 label="Bump mapping and shiny"
+		 layout="topleft"
+		 left_delta="0"
+		 name="BumpShiny"
+		 top_pad="1"
+		width="256" />
+ 		  <check_box
+		 control_name="VertexShaderEnable"
+		 height="16"
+		 initial_value="true"
+		 label="Basic shaders"
+		 layout="topleft"
+		 left_delta="0"
+		 name="BasicShaders"
+		 tool_tip="Disabling this option may prevent some graphics card drivers from crashing"
+		 top_pad="1"
+		 width="315">
+			<check_box.commit_callback
+		     function="Pref.VertexShaderEnable" />
+		</check_box>
+		<check_box
+		 control_name="WindLightUseAtmosShaders"
+		 height="16"
+		 initial_value="true"
+		 label="Atmospheric shaders"
+		 layout="topleft"
+		 left_delta="0"
+		 name="WindLightUseAtmosShaders"
+		 top_pad="1"
+		 width="256">
+			<check_box.commit_callback
+			 function="Pref.VertexShaderEnable" />
+		</check_box>
+    	<check_box
+		 control_name="RenderDeferred"
+		 height="16"
+		 initial_value="true"
+		 label="Light n Shads (Deferred)"
+		 layout="topleft"
+		 left_delta="0"
+		 name="UseLightShaders"
+		 top_pad="1"
+		 width="256">
+         	<check_box.commit_callback
+			 function="Pref.VertexShaderEnable" />
+    	</check_box>
+		    	<check_box
+		 control_name="RenderDeferredAtmospheric"
+		 height="16"
+		 initial_value="true"
+		 label="Atmospheric in Deferred"
+		 layout="topleft"
+		 left_delta="0"
+		 name="AtmoinDef"
+		 top_pad="1"
+		 width="256">
+         	<check_box.commit_callback
+			 function="Pref.VertexShaderEnable" />
+    	</check_box>
+    	<check_box
+		 control_name="RenderDeferredSSAO"
+		 height="16"
+		 initial_value="true"
+		 label="Amb. Occl. and Soft Shads"
+		 layout="topleft"
+		 left_delta="0"
+		 name="UseSSAO"
+		 top_pad="1"
+		 width="256">
+         	<check_box.commit_callback
+			 function="Pref.VertexShaderEnable" />
+    	</check_box>
+         <text
+         type="string"
+         length="1"
+         top="140"
+         follows="top|left"
+         height="20"
+         width="80"
+         word_wrap="true"
+         layout="topleft"
+         left="902"
+         name="shadows_label">
+         	Shadows:
+        </text>
+        <combo_box
+         control_name="RenderShadowDetail"
+         height="18"
+         layout="topleft"
+         left="965"
+         top="138" 
+         name="ShadowDetail"
+         width="110">
+           <combo_box.item
+            label="None"
+            name="0"
+            value="0"/>
+           <combo_box.item
+            label="Sun/Moon"
+            name="1"
+            value="1"/>
+           <combo_box.item
+            label="Sun/Moon+Projectors"
+            name="2"
+            value="2"/>
+        </combo_box>
+
+        <text
+         type="string"
+         length="1"
+         top="160"
+         follows="top|left"
+         height="12"
+         width="80"
+         word_wrap="true"
+         layout="topleft"
+         left="902"
+         name="reflection_label">
+            Water Refl:
+        </text>
+        <combo_box
+         control_name="RenderReflectionDetail"
+         height="18"
+         layout="topleft"
+         left="965"
+         top="156"
+         name="Reflections"
+         width="110">
+            <combo_box.item
+             label="Minimal"
+             name="0"
+             value="0"/>
+            <combo_box.item
+             label="Terrain and trees"
+             name="1"
+             value="1"/>
+            <combo_box.item
+             label="All static objects"
+             name="2"
+             value="2"/>
+            <combo_box.item
+             label="All avatars and objects"
+             name="3"
+             value="3"/>
+            <combo_box.item
+             label="Everything"
+             name="4"
+             value="4"/>
+        </combo_box>
+	 
+</floater>

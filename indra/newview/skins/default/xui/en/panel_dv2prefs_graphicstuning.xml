@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<panel
+ border="false"
+ follows="all"
+ height="408"
+ label="Graphics"
+ layout="topleft"
+ left="102"
+ name="panel_dv2prefs_graphics"
+ title="Graphics"
+ top="1"
+ width="517">
+    <text
+     follows="left|top"
+     height="12"
+     initial_value="Network performance:"
+     layout="topleft"
+     left="10"
+     name="network_performance_text"
+     top_pad="10"
+     value="Network performance:"
+     width="308" />
+    <check_box
+     control_name="ImagePipelineUseHTTP"
+     height="16"
+     label="Enable HTTP Textures"
+     layout="topleft"
+     left_delta="10"
+     name="enable_http_textures"
+     top_pad="5"
+     width="350" />
+    <check_box
+     control_name="UseHTTPInventory"
+     height="16"
+     label="Enable HTTP Inventory"
+     layout="topleft"
+     left_delta="0"
+     name="enable_http_inventory"
+     top_pad="3"
+     width="350" />
+    <check_box
+     control_name="CurlUseMultipleThreads"
+     height="16"
+     label="Enable Multi-threaded downloads"
+     layout="topleft"
+     left_delta="0"
+     name="enable_multi_thread_curl"
+     top_pad="3"
+     width="350" />
+    <slider
+     control_name="MeshMaxConcurrentRequests"
+     decimal_digits="0"
+     follows="left|top"
+     height="16"
+     increment="32"
+     initial_value="32"
+     label="Number of parallell mesh downloads"
+     label_width="200"
+     layout="topleft"
+     left_delta="0"
+     max_val="512"
+     min_val="32"
+     name="MeshMaxConcurrentRequests"
+     top_pad="5"
+     value="32"
+     width="455">
+    </slider>
+    <text
+     follows="left|top"
+     height="12"
+     initial_value="Alpha Mask Rendering:"
+     layout="topleft"
+     left="10"
+     name="Alpha Mask Rendering"
+     top_pad="10"
+     value="Alpha Mask Rendering:"
+     width="308" />
+    <check_box
+     control_name="RenderAutoMaskAlphaNonDeferred"
+     height="16"
+     layout="topleft"
+     left_delta="10"
+     name="RenderAutoMaskAlphaNonDeferred"
+     top_pad="5"
+     width="256"
+       label="Render alpha masks when &apos;Lighting and Shadows&apos; is not enabled"/>
+    <check_box
+     control_name="RenderAutoMaskAlphaDeferred"
+     height="16"
+     layout="topleft"
+     left_delta="0"
+     name="RenderAutoMaskAlphaDeferred"
+     top_pad="3"
+     width="256"
+       label="Render alpha masks when &apos;Lighting and Shadows&apos; is enabled"/>
+    <text
+     follows="left|top"
+     height="12"
+     initial_value="Miscellaneous Rendering:"
+     layout="topleft"
+     left="10"
+     name="Miscellaneous Rendering"
+     top_pad="10"
+     value="Miscellaneous Rendering:"
+     width="308" />
+    <check_box
+     control_name="RenderUnloadedAvatar"
+     height="16"
+     layout="topleft"
+     left_delta="10"
+     name="RenderUnloadedAvatar"
+     top_pad="5"
+     width="256"
+       label="Show avatars that have not finished loading"/>
+    <check_box
+     control_name="RenderAttachedLights"
+     height="16"
+     layout="topleft"
+     left_delta="0"
+     name="RenderAttachedLights"
+     top_pad="5"
+     width="256"
+       label="Render worn lights, e.g. facelights"/>
+    <slider
+     control_name="RenderVolumeLODFactor"
+     follows="left|top"
+     height="16"
+     increment="0.125"
+     initial_value="1.125"
+     label="Sculptie level of detail"
+     label_width="200"
+     layout="topleft"
+     left_delta="0"
+     max_val="8"
+     min_val="0.5"
+     name="render_volume_lod_factor"
+     top_pad="5"
+     value="1.125"
+     width="465" />
+    <slider
+     control_name="PrecachingDelay"
+     decimal_digits="0"
+     follows="left|top"
+     height="16"
+     increment="1"
+     initial_value="200"
+     label="Delay while pre-caching on login"
+     label_width="200"
+     layout="topleft"
+     left_delta="0"
+     max_val="15"
+     min_val="1"
+     name="PrecachingDelay"
+     top_pad="5"
+     value="200"
+     width="448">
+    </slider>
+</panel>

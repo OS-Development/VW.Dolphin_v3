@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<panel label="Grafik" name="panel_dv2prefs_graphics">
+<text name="network_performance_text" value="Netzwerktuning:"/>
+<check_box label="Texturen per HTTP holen" name="enable_http_textures"/>
+<check_box label="Inventar per HTTP holen" name="enable_http_inventory"/>
+<check_box label="Mehrere Threads für Downloads" name="enable_multi_thread_curl"/>
+<text name="Alpha Mask Rendering" value="Verwende Alphamasken"/>
+<check_box name="RenderAutoMaskAlphaNonDeferred" label="bei ausgeschaltetem 'Licht und Schatten'"/>
+<check_box name="RenderAutoMaskAlphaDeferred" label="bei eingeschaltetem 'Licht und Schatten'"/>
+<text name="Miscellaneous Rendering" value="Weitere Einstellungen:"/>
+<check_box name="RenderUnloadedAvatar" label="Unvollständig geladene Avatare anzeigen"/>
+<check_box name="RenderAttachedLights" label="An avatare angehängte Lichtquellen darstellen"/>
+<slider label="Sculptie Details" name="render_volume_lod_factor"/>
+<slider label="Verzögerung beim Anmelden" name="PrecachingDelay"/>
+</panel>

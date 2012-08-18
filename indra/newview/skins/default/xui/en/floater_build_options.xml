@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<floater
+ legacy_header_height="18"
+ height="245"
+ layout="topleft"
+ name="build options floater"
+ help_topic="build_options_floater"
+ save_rect="true"
+ title="GRID OPTIONS"
+ width="264">
+    <spinner
+     control_name="GridResolution"
+     follows="left|top"
+     height="23"
+     initial_value="1"
+     label="Units (meters)"
+     label_width="130"
+     layout="topleft"
+     left="10"
+     max_val="5"
+     min_val="0.01"
+     name="GridResolution"
+     top_pad="30"
+     width="200" />
+    <spinner
+     control_name="GridDrawSize"
+     decimal_digits="1"
+     follows="left|top"
+     height="23"
+     increment="0.5"
+     initial_value="5"
+     label="Extents (meters)"
+     label_width="130"
+     layout="topleft"
+     left_delta="0"
+     max_val="50"
+     min_val="1"
+     name="GridDrawSize"
+     top_pad="0"
+     width="200" />
+    <check_box
+     control_name="GridSubUnit"
+     height="16"
+     label="Snap to sub-units"
+     layout="topleft"
+     name="GridSubUnit"
+     top_pad="0"
+     width="200" />
+    <check_box
+     control_name="GridCrossSections"
+     height="16"
+     label="View cross-sections"
+     layout="topleft"
+     name="GridCrossSection"
+     top_pad="5"
+     width="200" />
+   <text
+         type="string"
+         length="1"
+         follows="left|top"
+         height="16"
+         layout="topleft"
+         left="10"
+         tool_tip="Grid opacity"
+         name="grid_opacity_label"
+         top_pad="5"
+         width="128">
+            Opacity:
+   </text>
+    <slider
+     control_name="GridOpacity"
+     follows="left"
+     height="18"
+     increment="0.05"
+     initial_value="0.7"
+     layout="topleft"
+     name="GridOpacity"
+     show_text="false"
+     top_pad="0"
+     width="210" />
+   <text
+         type="string"
+         length="1"
+         follows="left|top"
+         height="16"
+         layout="topleft"
+         left="10"
+         tool_tip="Offset"
+         name="pivot_offset_label"
+         top_pad="5"
+         width="128">
+            Pivot offset:
+   </text>
+   <button
+	top_delta="-2"
+	layout="topleft"
+	follows="top|right"
+	left_pad="62"
+	height="18"
+	width="50"
+	label="Reset"
+	name="pivot_reset_button"
+	tool_tip="Click to reset the pivot point to the center location.">
+      <button.commit_callback
+       function="Pivot.Reset" />
+       </button>
+        <spinner
+         top_pad="3"
+         left="10"
+         decimal_digits="2"
+         follows="left|top"
+	 layout="topleft"
+         height="16"
+         increment="0.01"
+         label="X:"
+         label_width="15"
+         max_val="256"
+         min_val="-256"
+         name="X pos"
+         width="80"
+         control_name="FSBuildPrefs_PivotX"/>
+        <spinner
+         top_delta="0"
+	 left_delta="80"
+         decimal_digits="2"
+         follows="left|top"
+	 layout="topleft"
+         height="16"
+         increment="0.01"
+         label="Y:"
+         label_width="15"
+         max_val="256"
+         min_val="-256"
+         name="Y pos"
+         width="80"
+         control_name="FSBuildPrefs_PivotY"/>
+        <spinner
+         top_delta="0"
+	 left_delta="80"
+         decimal_digits="2"
+         follows="left|top"
+	 layout="topleft"
+         height="16"
+         increment="0.01"
+         label="Z:"
+         label_width="15"
+         max_val="256"
+         min_val="-256"
+         name="Z pos"
+         width="80"
+         control_name="FSBuildPrefs_PivotZ"/>
+        <check_box
+         top_pad="10"
+         left="10"
+         enabled="true"
+         follows="left|top"
+	 layout="topleft"
+         height="16"
+         label="Values are percentages"
+         tool_tip="Default settings are Percentages and every axis set at 50"
+         name="EmPivotPercToggle"
+         width="100"
+         control_name="FSBuildPrefs_PivotIsPercent"/>
+    <check_box
+         height="16"
+         enabled="true"
+     label="Rez objects with land group if possible"
+     control_name="RezWithLandGroup"
+     layout="topleft"
+     left_delta="0"
+     name="rez_with_land_group"
+     top_pad="3"
+     width="350" />
+</floater>

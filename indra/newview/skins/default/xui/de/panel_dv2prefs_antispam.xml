@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<panel label="Antispam" name="dv2prefs_antispam">
+<text name="antispam_text">Spamschutz:</text>
+<check_box label="Spamschutz verwenden" name="UseAntiSpam" />
+<text name="AntiSpamText1">Höchstzahl Zeilen pro Message:</text>
+<spinner name="_NACL_AntiSpamNewlines" tool_tip="Maximale Zahl an Zeilen in einer einzelnen Nachricht [Default: 70]"/>
+<text name="AntiSpamText2">Höchstzahl Events von einer Quelle:</text>
+<spinner name="_NACL_AntiSpamAmount" tool_tip="Maximale anzahl ähnlicher Events von einer Quelle in 2 Sekunden [Default: 10]"/>
+<text name="AntiSpamText3">Soundrequest Multiplikator:</text>
+<spinner name="_NACL_AntiSpamSoundMulti" tool_tip="Multiplikator für Sound Requests [Default: 10]"/>
+<text name="AntiSpamText4">Sound Preload Multiplikator:</text>
+<spinner name="_NACL_AntiSpamSoundPreloadMulti" tool_tip="Multiplikator für Sound Preload Requests [Default: 4]"/>
+<button name="AntiSpamUnblock" label="Alle Blocks löschen"/>
+</panel>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<panel label="Navigation" name="dv2prefs_navi">
+<text name="minimap_text">Minimap:</text>
+<check_box label="Rotiere die Minimap" name="minimap_rotate"/>
+<check_box label="Physikalische Objekte hervorheben (Eigene: Grün, Fremde: Rot)" name="highlight_physical"/>
+<check_box label="Phantom Prims durchscheinend darstellen" name="phantom_is_transparent"/>
+<slider label="Transparenz für Phantom Prims" tool_tip="Transparenz für Phantom Prims" name="phantom_prim_opacity"/>
+<slider label="Maximale Größe für Prims" tool_tip="Prims ab dieser Größe werden auf der Minimap nicht angezeigt" name="prim_max_radius"/>
+<text name="camera_text">Kamera:</text>
+<check_box label="Bewege die Kamera nicht automatisch bei Kollisionen" tool_tip="Einschalten, um die Kamera bei Kollisionen nicht automatisch aus dem kollidierenden Objekt heraus zu bewegen" name="camera_ignore_collisions"/>
+</panel>
